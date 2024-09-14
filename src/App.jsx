@@ -1,11 +1,10 @@
-
 import './App.css'
 
 function App() {
 
   return (
     <div>
-      <h2>wow ok</h2>
+      {/* This Page is kinda useless */}
     </div>
   )
 }
