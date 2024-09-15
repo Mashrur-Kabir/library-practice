@@ -1,0 +1,19 @@
+.buttonStyle {
+    border: 2px solid rgb(241, 245, 244);
+    padding: 8px;  
+    border-radius: 8px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.buttonStyle:hover {
+    background-color: white; 
+    color: black; 
+    font-weight: 600;
+    transform: scale(0.95);
+    box-shadow: 0px 0px rgb(155, 211, 220); /* 0 0 x. x is box shadow */
+}
+
+.buttonStyle:active{
+    transform: scale(0.90);
+}
+

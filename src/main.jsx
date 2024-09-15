@@ -7,16 +7,19 @@ import {
 } from "react-router-dom";
 import './index.css'
 import Home from './Components/Home/Home';
-import ErrorPage from './Components/Errorpage/Errorpage';
+import ErrorPage from './Components/ErrorPage/ErrorPage'
+import Users from './Components/Users/Users';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>, /* when we use home (main comp), we will show its children */
-    errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage> ,
   },
   {
-    
+    path: "/users",
+    loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+    element: <Users></Users>
   }
 ]);
 
