@@ -1,0 +1,12 @@
+.backTxtBtn{
+    transition: transform 0.1s ease-in-out;
+}
+
+.backTxtBtn:hover {
+    transform: scale(0.97);
+    color: rgb(181, 97, 212);
+}
+
+.backTxtBtn:active{
+    transform: scale(0.87);
+}

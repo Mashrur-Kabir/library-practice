@@ -1,0 +1,16 @@
+.backBtn{
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.backBtn:hover{
+    transform: scale(1.50) rotate(360deg);
+    border: 1px solid slateblue;
+}
+
+.backBtn:active{
+    transform: scale(1.20);
+}
+
+    
