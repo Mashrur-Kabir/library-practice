@@ -5,15 +5,14 @@ import './Book.css'
 
 const Book = ({book}) => {
 
-    const {id, name} = book;
+    const {name} = book;
 
-    console.log(id, name);
+    // console.log(book);
 
     return (
-        <div className='figtreeFont cateCard border rounded-lg flex flex-1 flex-col items-center gap-6 py-8'>
+        <NavLink to={`/genres`} className='figtreeFont cateCard border rounded-lg flex flex-1 flex-col items-center gap-6 py-8'>
             <h2 className='text-xl font-bold bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 bg-clip-text text-transparent'>{name}</h2>
-            <NavLink to={`/book/${id}`} className='hover:underline flex items-center gap-3'>Show Books</NavLink>
-        </div>
+        </NavLink>
     );
 };
 

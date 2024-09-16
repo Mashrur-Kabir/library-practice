@@ -20,8 +20,6 @@ const Books = () => {
         return <div className="flex flex-col items-center justify-center min-h-screen mx-auto w-auto">Loading...</div>;
     }
 
-    console.log(bookData);
-
     return (
         <div>
             <h2 className='my-10 text-3xl font-bold text-center figtreeFont'>Choose A Category:</h2>

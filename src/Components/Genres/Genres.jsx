@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import { fetchBooks } from "../bookService";
 import Genre from "../Genre/Genre";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const Genres = () => {
 
-    const { bookId } = useParams(); // Extract bookId from URL
+    // const { bookId } = useParams(); // Extract bookId from URL
     const [genreData, setGenreData] = useState([]);
-
-    console.log(bookId); //
 
     useEffect(() => {
         const dataLoad = async () => {
@@ -22,7 +20,7 @@ const Genres = () => {
         };
 
         dataLoad(); // Load data when the component mounts
-    }, []); // Re-run the effect if bookId changes
+    }, []);
 
     return (
         <div>
