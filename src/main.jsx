@@ -1,25 +1,24 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 import './index.css'
 import Home from './Components/Home/Home';
 import ErrorPage from './Components/ErrorPage/ErrorPage'
 import Users from './Components/Users/Users';
 import UserDetails from './Components/userDetails/userDetails';
 import Books from './Components/Books/Books';
-/* import Genres from './Components/Genres/Genres'; */
 import ScienceFic from './Components/ScienceFic/ScienceFic';
 import Fantasy from './Components/Fantasy/Fantasy';
 import NonFiction from './Components/NonFiction/NonFiction';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>, /* when we use home (main comp), we will show its children */
+    element: <Home></Home>,
     errorElement: <ErrorPage></ErrorPage> ,
   },
   {

@@ -10,7 +10,6 @@ const Header = () => {
                 <p className="mt-6 mb-20 text-sm figtreeFont">A domain for the most inquisitive book lovers on the planet</p>
             </div>
             <nav className="flex items-center justify-center gap-5 figtreeFont naviBar">
-                <NavLink to="/">Home</NavLink>
                 <NavLink to="/users">Users</NavLink>
                 <NavLink to="/dashboard">Dashboard</NavLink>
                 <NavLink to="/books">Books</NavLink>

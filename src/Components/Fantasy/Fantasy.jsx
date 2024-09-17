@@ -7,6 +7,7 @@ import GenreShow from '../genreShow/genreShow';
 const Fantasy = () => {
     
     const [genreData, setGenreData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const dataLoad = async () => {
@@ -14,6 +15,7 @@ const Fantasy = () => {
                 const data = await fetchBooks('https://gist.githubusercontent.com/Mashrur-Kabir/4c2f4472893065c6f0b358c4f07b2ad7/raw/e79ab0e8cc6070aaa52c75ca5b09e876b72157ce/bookCategories.json');
                 const selectedCategory = data.find(category => category.id === 'cat2'); // the selectedCategory will correctly hold the object with id of "cat2" if the JSON data is fetched successfully. 
                 setGenreData(selectedCategory); // Set the selected category data
+                setLoading(false); // Set loading state to false when data is loaded successfully.
             } catch (error) {
                 console.error("Error loading genres:", error);
             }
@@ -22,8 +24,8 @@ const Fantasy = () => {
         dataLoad(); // Load data when the component mounts
     }, []);
 
-    if (!genreData) {
-        return <p className="flex flex-col items-center justify-center min-h-screen mx-auto w-auto">Loading...</p>;
+    if (loading) {
+        return <div className="flex flex-col items-center justify-center min-h-screen mx-auto w-auto">Loading...</div>;
     }
 
     // Check if sections exist and handle potential cases
