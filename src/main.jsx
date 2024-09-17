@@ -11,7 +11,10 @@ import ErrorPage from './Components/ErrorPage/ErrorPage'
 import Users from './Components/Users/Users';
 import UserDetails from './Components/userDetails/userDetails';
 import Books from './Components/Books/Books';
-import Genres from './Components/Genres/Genres';
+/* import Genres from './Components/Genres/Genres'; */
+import ScienceFic from './Components/ScienceFic/ScienceFic';
+import Fantasy from './Components/Fantasy/Fantasy';
+import NonFiction from './Components/NonFiction/NonFiction';
 
 const router = createBrowserRouter([
   {
@@ -34,8 +37,16 @@ const router = createBrowserRouter([
     element: <Books></Books>
   },
   {
-    path: "/genres",
-    element: <Genres></Genres>
+    path: "/sciFi",
+    element: <ScienceFic></ScienceFic>
+  },
+  {
+    path: "/fantasy",
+    element: <Fantasy></Fantasy>
+  },
+  {
+    path: "/nonFic",
+    element: <NonFiction></NonFiction>
   }
 ]);
 
