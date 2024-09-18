@@ -17,3 +17,16 @@
     transform: scale(0.90);
 }
 
+/* submit for login */
+
+.submitStyle {
+    transition: transform 0.1s ease-in-out;
+}
+
+.submitStyle:hover {
+    transform: scale(0.97);
+}
+
+.submitStyle:active{
+    transform: scale(0.94);
+}

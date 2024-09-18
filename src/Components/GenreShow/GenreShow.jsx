@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
+import useGoBack from "../handleGoBack";
+import back from '../../assets/Icons/back.png';
 
 const GenreShow = ({sections}) => {
+
+    const handleGoBack = useGoBack();
+
     return (
         <div>
             {
@@ -24,6 +29,12 @@ const GenreShow = ({sections}) => {
                     </p>
                 )
             }
+            <div className="mt-9 flex justify-center">
+                <button onClick={handleGoBack}>
+                    <img className="w-8 rounded-full backBtn" src={back} alt="Go Back" />
+                </button>
+            </div>
+            
         </div>
     );
 };

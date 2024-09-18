@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import './index.css'
 import Home from './Components/Home/Home';
 import ErrorPage from './Components/ErrorPage/ErrorPage'
 import Users from './Components/Users/Users';
@@ -14,6 +13,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Login from './Components/Login/Login';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+import Dashboard from './Components/Dashboard/Dashboard';
+
+
+const handleLoginSubmit = data => {
+  console.log('Login up data', data);
+}
 
 const router = createBrowserRouter([
   {
@@ -46,6 +54,29 @@ const router = createBrowserRouter([
   {
     path: "/nonFic",
     element: <NonFiction></NonFiction>
+  },
+  {
+    path: "/login",
+    element: <Login
+    formTitle={'Login'}
+    handleSubmit={handleLoginSubmit}>
+      <div className="mb-8">
+        <h2 className="mb-4 text-3xl font-bold text-center figtreeFont">Welcome bookworm!</h2>
+        <p>Please Login here...</p>
+      </div>
+    </Login>,
+  },
+  {
+    path: "/about",
+    element: <About></About>
+  },
+  {
+    path: "/contact",
+    element: <Contact></Contact>
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>
   }
 ]);
 
