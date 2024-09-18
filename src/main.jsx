@@ -17,6 +17,7 @@ import Login from './Components/Login/Login';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Dashboard from './Components/Dashboard/Dashboard';
+import SignUp from './Components/Signup/Signup';
 
 
 const handleLoginSubmit = data => {
@@ -77,7 +78,14 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>
-  }
+  },
+  {
+    path: "/signup",
+    element: <SignUp
+    formTitle={'Login'}
+    handleSubmit={handleLoginSubmit}>
+    </SignUp>,
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(
